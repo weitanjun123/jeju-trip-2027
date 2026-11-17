@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jeju Family Trip · 1–8 June 2027</title>
+<style>
+:root{
+  --bg:#fbf7f1; --card:#ffffff; --ink:#1f2a30; --muted:#6b7780; --line:#ece4d8;
+  --tang:#f28c28; --tang-soft:#fff1e2; --sea:#1f8a8a; --sea-soft:#e3f4f2;
+  --nap:#5b5fc7; --nap-soft:#eceefd; --meal:#9a7b4f; --meal-soft:#f6efe4;
+  --fly:#2f6fb5; --fly-soft:#e6f0fb; --warn:#b4472b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+header{background:linear-gradient(135deg,#f6a24a 0%,#f28c28 45%,#1f8a8a 100%);color:#fff;padding:28px 18px 22px}
+header h1{margin:0 0 4px;font-size:26px;letter-spacing:-.3px}
+header p{margin:0;opacity:.95}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chip{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);padding:3px 10px;border-radius:999px;font-size:12.5px}
+nav{position:sticky;top:0;z-index:5;background:rgba(251,247,241,.96);backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);display:flex;gap:6px;overflow-x:auto;padding:8px 12px;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{flex:0 0 auto;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);
+  padding:6px 11px;border-radius:10px;font-size:13px;line-height:1.2;text-align:center}
+nav a b{display:block;font-size:12px;color:var(--tang)}
+main{max-width:820px;margin:0 auto;padding:14px 12px 60px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:14px 0;scroll-margin-top:64px}
+h2{margin:0 0 2px;font-size:20px}
+h3{margin:16px 0 6px;font-size:15px}
+.sub{color:var(--muted);font-size:13.5px;margin:0 0 10px}
+.base{display:inline-block;background:var(--sea-soft);color:var(--sea);font-weight:600;font-size:12.5px;padding:2px 9px;border-radius:999px;margin-bottom:8px}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:92px 1fr;gap:10px;padding:9px 0;border-top:1px dashed var(--line)}
+.tl li:first-child{border-top:0}
+.t{font-variant-numeric:tabular-nums;font-weight:700;font-size:13.5px;color:var(--ink)}
+.what b{font-weight:650}
+.what small{display:block;color:var(--muted);font-size:12.8px;margin-top:2px}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;
+  padding:1px 7px;border-radius:6px;margin-right:6px;vertical-align:1px}
+.tl li.nap{background:var(--nap-soft);border-radius:10px;padding:9px 8px;margin:4px -8px;border-top:0}
+.tl li.nap .tag{background:var(--nap);color:#fff}
+.tl li.act .tag{background:var(--tang);color:#fff}
+.tl li.meal .tag{background:var(--meal-soft);color:var(--meal)}
+.tl li.drive .tag{background:#eef1f3;color:#4a5963}
+.tl li.fly{background:var(--fly-soft);border-radius:10px;padding:9px 8px;margin:4px -8px;border-top:0}
+.tl li.fly .tag{background:var(--fly);color:#fff}
+.tl li.rest .tag{background:var(--sea-soft);color:var(--sea)}
+.rain{margin-top:12px;background:#f3f6f8;border-radius:10px;padding:9px 11px;font-size:13.5px}
+.rain b{color:#3b5a6e}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:560px){.grid2{grid-template-columns:1fr}.tl li{grid-template-columns:80px 1fr}}
+.box{background:var(--tang-soft);border-radius:12px;padding:11px 12px;font-size:13.8px}
+.box.sea{background:var(--sea-soft)}
+.box h4{margin:0 0 4px;font-size:14px}
+ul.clean{margin:6px 0 0;padding-left:18px}
+ul.clean li{margin:3px 0}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.3px;color:var(--muted)}
+.warn{color:var(--warn);font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:8px;font-size:12.5px;margin-top:6px}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+.loc{margin-top:6px;font-size:12.6px;background:#f7f4ee;border:1px solid var(--line);border-radius:9px;padding:6px 8px;line-height:1.45}
+.loc .r{display:flex;gap:6px;align-items:flex-start;flex-wrap:wrap}
+.loc .r+.r{margin-top:3px}
+.loc .lb{flex:0 0 auto;font-weight:700;font-size:10.5px;padding:1px 5px;border-radius:5px;margin-top:2px}
+.loc .lb.kr{background:#03c75a;color:#fff}.loc .lb.en{background:#4285f4;color:#fff}
+.loc .ad{flex:1 1 180px;color:#33424b}
+.loc a,.loc button{flex:0 0 auto;font-size:11.5px;font-weight:600;text-decoration:none;border-radius:6px;padding:1px 7px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;font-family:inherit}
+#places table td{font-size:12.6px}
+footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 16px 30px}
+a{color:var(--sea)}
+</style>
+</head>
+<body>
+<header>
+  <h1>🍊 Jeju Family Trip</h1>
+  <p>Tue 1 – Tue 8 June 2027 · Singapore ⇄ Jeju on Scoot</p>
+  <div class="chips">
+    <span class="chip">4 adults + 3 kids (6, 5, 3)</span>
+    <span class="chip">7 nights · 3 bases</span>
+    <span class="chip">Self-drive 9-seater</span>
+    <span class="chip">Naps 1–4 pm = drive time 💤</span>
+  </div>
+</header>
+
+<nav>
+  <a href="#overview"><b>Plan</b>Overview</a>
+  <a href="#d1"><b>Tue 1</b>Arrive</a>
+  <a href="#d2"><b>Wed 2</b>East</a>
+  <a href="#d3"><b>Thu 3</b>→ South</a>
+  <a href="#d4"><b>Fri 4</b>South</a>
+  <a href="#d5"><b>Sat 5</b>South-west</a>
+  <a href="#d6"><b>Sun 6</b>→ West</a>
+  <a href="#d7"><b>Mon 7</b>West</a>
+  <a href="#d8"><b>Tue 8</b>Fly home</a>
+  <a href="#places"><b>Map</b>Addresses</a>
+  <a href="#prep"><b>Prep</b>Checklist</a>
+</nav>
+
+<main>
+
+<section class="card" id="overview">
+  <h2>How the week works</h2>
+  <p class="sub">Every day follows the kids' rhythm. The main activity is in the morning while energy is high. Lunch is at 12:00. The car moves between areas during the 1–4 pm nap, then there's a lighter late-afternoon activity, an early dinner and bed around 19:30.</p>
+  <div class="grid2">
+    <div class="box">
+      <h4>Daily rhythm</h4>
+      <ul class="clean">
+        <li><b>07:30</b> breakfast</li>
+        <li><b>09:00–11:45</b> main activity</li>
+        <li><b>12:00</b> lunch</li>
+        <li><b>13:00–14:30</b> 💤 nap drive (1–1.5 h scenic route)</li>
+        <li><b>15:00–17:30</b> light activity / pool</li>
+        <li><b>17:30</b> early dinner · <b>19:30</b> bed</li>
+      </ul>
+    </div>
+    <div class="box sea">
+      <h4>Where you sleep</h4>
+      <ul class="clean">
+        <li><b>Tue 1 – Wed 2</b> (2 nights): East · Seongsan / Pyoseon</li>
+        <li><b>Thu 3 – Sat 5</b> (3 nights): South · Jungmun resort area</li>
+        <li><b>Sun 6 – Mon 7</b> (2 nights): West · Aewol (25–35 min to the airport)</li>
+      </ul>
+      <p style="margin:6px 0 0;font-size:12.8px;color:#4a6a6a">The route goes clockwise round the island, so no single drive is longer than the nap.</p>
+    </div>
+  </div>
+  <div class="legend">
+    <span><i class="dot" style="background:var(--tang)"></i>Activity</span>
+    <span><i class="dot" style="background:var(--nap)"></i>Nap drive</span>
+    <span><i class="dot" style="background:var(--meal-soft);border:1px solid var(--meal)"></i>Meal</span>
+    <span><i class="dot" style="background:#dfe5e9"></i>Drive</span>
+    <span><i class="dot" style="background:var(--fly)"></i>Flight</span>
+  </div>
+  <p class="sub" style="margin-top:10px">⚠️ Flight times use Scoot's current TR812/TR813 schedule. The June 2027 timetable isn't published yet, so check the times when you book. Opening hours are from 2026 sources and the drive times are estimates. Check both a week before you go.</p>
+</section>
+
+<!-- DAY 1 -->
+<section class="card" id="d1">
+  <h2>Day 1 · Tue 1 Jun — Land, beach, coastal nap drive east</h2>
+  <span class="base">Sleep: East (Seongsan / Pyoseon)</span>
+  <ul class="tl">
+    <li class="fly"><span class="t">Mon 31 May<br>21:30</span><span class="what"><span class="tag">Flight</span><b>Changi T1: check in for Scoot TR812</b><small>Kids in pyjamas. Ask for 7 seats together, with the 3 kids each next to an adult.</small></span></li>
+    <li class="fly"><span class="t">00:10</span><span class="what"><span class="tag">Flight</span><b>TR812 departs Singapore</b><small>About 6 h. Jeju is 1 h ahead of Singapore. Kids sleep on board.</small></span></li>
+    <li class="fly"><span class="t">07:15</span><span class="what"><span class="tag">Flight</span><b>Land at Jeju International (CJU)</b><div class="loc" data-n="Jeju International Airport" data-ko="제주특별자치도 제주시 공항로 2" data-kq="제주국제공항" data-en="2 Gonghang-ro, Jeju-si, Jeju-do" data-eq="Jeju International Airport"></div></span></li>
+    <li class="drive"><span class="t">07:15–08:15</span><span class="what"><span class="tag">Arrive</span><b>Immigration, bags, toilets, snacks</b></span></li>
+    <li class="drive"><span class="t">08:15–09:15</span><span class="what"><span class="tag">Car</span><b>Shuttle to the rental-car centre and collect the van</b><small>Kia Carnival 9-seater: 7 people in rows 1–3 and luggage in the folded 4th row. Fit and check all 3 pre-booked child seats.</small><small>📍 The rental-centre address depends on the company: add it once booked. Airport → rental centre is a 5–10 min shuttle.</small></span></li>
+    <li class="meal"><span class="t">09:30–10:30</span><span class="what"><span class="tag">Meal</span><b>Breakfast in Jeju City</b><small>An easy bakery or a haejang-guk (hangover soup) place near the airport.</small></span></li>
+    <li class="act"><span class="t">10:45–12:00</span><span class="what"><span class="tag">Play</span><b>Hamdeok Beach</b> · 🚗 Jeju City → 15 km · ~25 min<small>Shallow emerald water and soft sand for digging. The official swimming season (with lifeguards) started 24 Jun in 2026, so early June is paddling only.</small><div class="loc" data-n="Hamdeok Beach" data-ko="제주특별자치도 제주시 조천읍 조함해안로 525" data-kq="함덕해수욕장" data-en="525 Johamhaean-ro, Jocheon-eup, Jeju-si, Jeju-do" data-eq="Hamdeok Beach Jeju"></div></span></li>
+    <li class="meal"><span class="t">12:00–12:50</span><span class="what"><span class="tag">Meal</span><b>Lunch at Hamdeok</b></span></li>
+    <li class="nap"><span class="t">13:00–14:30</span><span class="what"><span class="tag">💤 Nap drive</span><b>Haemaji coastal road east: Hamdeok → Gimnyeong → Woljeong → Sehwa → Jongdal → Seongsan</b><small>About 60 km of slow seaside road, roughly 1 h 20 – 1 h 30.</small><small>🚗 ~55 km · direct would be ~40 km / 45 min</small></span></li>
+    <li class="rest"><span class="t">14:30–15:00</span><span class="what"><span class="tag">Wind down</span><b>Coffee drive-through near Seongsan while the kids finish their nap</b></span></li>
+    <li class="rest"><span class="t">15:00</span><span class="what"><span class="tag">Hotel</span><b>Check in, East base</b><small>Ask for early check-in, since you'll have been up all night.</small></span></li>
+    <li class="rest"><span class="t">15:30–17:30</span><span class="what"><span class="tag">Rest</span><b>Hotel pool or room time</b></span></li>
+    <li class="meal"><span class="t">17:30–18:45</span><span class="what"><span class="tag">Meal</span><b>Early dinner in Seongsan: Jeju black-pork BBQ</b></span></li>
+    <li class="rest"><span class="t">19:30</span><span class="what"><span class="tag">Bed</span><b>Kids down early. It's been a long day.</b></span></li>
+  </ul>
+  <div class="rain"><b>If it rains:</b> skip Hamdeok and do Aqua Planet (Day 2's morning) this afternoon after the nap drive. Move Snoopy Garden to Wed morning, since it opens in the rain.</div>
+</section>
+
+<!-- DAY 2 -->
+<section class="card" id="d2">
+  <h2>Day 2 · Wed 2 Jun — Aquarium &amp; Snoopy Garden</h2>
+  <span class="base">Sleep: East (Seongsan / Pyoseon)</span>
+  <ul class="tl">
+    <li class="meal"><span class="t">07:30–08:30</span><span class="what"><span class="tag">Meal</span><b>Breakfast</b></span></li>
+    <li class="drive"><span class="t">09:15–09:30</span><span class="what"><span class="tag">Drive</span><b>To Aqua Planet, Seopjikoji</b><small>🚗 ~5–10 km · 10–15 min from Seongsan/Pyoseon hotels</small></span></li>
+    <li class="act"><span class="t">09:30–12:00</span><span class="what"><span class="tag">Activity</span><b>Aqua Planet Jeju</b><small>Open about 09:30–18:00. Ocean Arena show at <b>10:50</b> (about 40 min). Also look out for the haenyeo (women divers) demonstration and fish feeding. Under 36 months free, so the 3-year-old may need ID showing age. Has nursing rooms. No stroller rental, so bring yours.</small><div class="loc" data-n="Aqua Planet Jeju" data-ko="제주특별자치도 서귀포시 성산읍 섭지코지로 95" data-kq="아쿠아플라넷 제주" data-en="95 Seopjikoji-ro, Seongsan-eup, Seogwipo-si, Jeju-do" data-eq="Aqua Planet Jeju"></div></span></li>
+    <li class="meal"><span class="t">12:00–12:50</span><span class="what"><span class="tag">Meal</span><b>Lunch at Seopjikoji / Seongsan</b></span></li>
+    <li class="nap"><span class="t">13:00–14:30</span><span class="what"><span class="tag">💤 Nap drive</span><b>Scenic loop to Snoopy Garden via Jongdal coast and Bijarim-ro forest road</b><small>🚗 Direct is ~25 km / 30 min. The loop is ~55 km / about 1 h 20.</small></span></li>
+    <li class="rest"><span class="t">14:30–15:00</span><span class="what"><span class="tag">Wind down</span><b>Park at Snoopy Garden and let the kids wake up</b></span></li>
+    <li class="act"><span class="t">15:00–17:30</span><span class="what"><span class="tag">Activity</span><b>Snoopy Garden (Gujwa)</b><small>Summer hours 09:00–19:00, last entry 18:00. Child ₩13,000, under 36 months free. Indoor themed halls plus outdoor garden trails. Open in the rain.</small><div class="loc" data-n="Snoopy Garden" data-ko="제주특별자치도 제주시 구좌읍 금백조로 930" data-kq="스누피가든" data-en="930 Geumbaekjo-ro, Gujwa-eup, Jeju-si, Jeju-do" data-eq="Snoopy Garden Jeju"></div></span></li>
+    <li class="drive"><span class="t">17:30–18:00</span><span class="what"><span class="tag">Drive</span><b>Back toward base</b><small>🚗 ~25 km · about 30 min</small></span></li>
+    <li class="meal"><span class="t">18:00–19:00</span><span class="what"><span class="tag">Meal</span><b>Dinner (seafood ramyeon or abalone porridge near Seongsan)</b></span></li>
+    <li class="rest"><span class="t">19:30</span><span class="what"><span class="tag">Bed</span></span></li>
+  </ul>
+  <div class="rain"><b>If it rains:</b> both stops are rain-proof. Spend more time in Snoopy Garden's indoor halls.</div>
+</section>
+
+<!-- DAY 3 -->
+<section class="card" id="d3">
+  <h2>Day 3 · Thu 3 Jun — Steam train, then over to the south</h2>
+  <span class="base">Sleep: South (Jungmun)</span>
+  <ul class="tl">
+    <li class="meal"><span class="t">07:30</span><span class="what"><span class="tag">Meal</span><b>Breakfast · check out by 08:15</b></span></li>
+    <li class="drive"><span class="t">08:30–09:05</span><span class="what"><span class="tag">Drive</span><b>Seongsan → Eco Land</b><small>🚗 ~30 km · about 35 min</small></span></li>
+    <li class="act"><span class="t">09:05–11:45</span><span class="what"><span class="tag">Activity</span><b>Eco Land Theme Park</b><small>Summer about 08:30–18:00. Ride a little steam train through the gotjawal forest between stations, with trains every 10–15 min. Kid's Town, picnic garden, barefoot volcanic-gravel path. Child ₩10,000, under 36 months free.</small><div class="loc" data-n="Eco Land Theme Park" data-ko="제주특별자치도 제주시 조천읍 번영로 1278-169" data-kq="에코랜드 테마파크" data-en="1278-169 Beonyeong-ro, Jocheon-eup, Jeju-si, Jeju-do" data-eq="Eco Land Theme Park Jeju"></div></span></li>
+    <li class="meal"><span class="t">11:45–12:45</span><span class="what"><span class="tag">Meal</span><b>Lunch at an Eco Land station café or in Gyorae village</b></span></li>
+    <li class="nap"><span class="t">12:45–14:15</span><span class="what"><span class="tag">💤 Nap drive</span><b>Eco Land → Namjo-ro forest road → Seogwipo → Jungmun</b><small>About 1 h 15 – 1 h 30 through the island's forested middle.</small><small>🚗 ~60 km · direct ~50 km / 1 h</small></span></li>
+    <li class="rest"><span class="t">14:15–15:00</span><span class="what"><span class="tag">Hotel</span><b>Kids finish napping. Check in at Jungmun at 15:00.</b></span></li>
+    <li class="act"><span class="t">15:30–17:00</span><span class="what"><span class="tag">Activity</span><b>Teddy Bear Museum (Jungmun)</b> · 🚗 ~2 km · 5 min from Jungmun hotels<small>09:00–18:00, last entry 17:30. Child about ₩10,000. Indoors with photo spots and a garden with sea views. Nursing room and high chairs available.</small><div class="loc" data-n="Teddy Bear Museum" data-ko="제주특별자치도 서귀포시 중문관광로110번길 31" data-kq="테디베어뮤지엄 제주" data-en="31 Jungmungwangwang-ro 110beon-gil, Seogwipo-si, Jeju-do" data-eq="Teddy Bear Museum Jeju"></div></span></li>
+    <li class="meal"><span class="t">17:15–18:30</span><span class="what"><span class="tag">Meal</span><b>Dinner in the Jungmun resort area</b></span></li>
+    <li class="rest"><span class="t">19:30</span><span class="what"><span class="tag">Bed</span></span></li>
+  </ul>
+  <div class="rain"><b>If it rains:</b> Eco Land runs in light rain (stations are covered). In heavy rain, go straight to Jungmun and spend the morning at the Teddy Bear Museum. In the afternoon, add the hotel pool if it's indoor.</div>
+</section>
+
+<!-- DAY 4 -->
+<section class="card" id="d4">
+  <h2>Day 4 · Fri 4 Jun — Hydrangeas &amp; piglets, waterfall, market dinner</h2>
+  <span class="base">Sleep: South (Jungmun)</span>
+  <ul class="tl">
+    <li class="meal"><span class="t">07:30</span><span class="what"><span class="tag">Meal</span><b>Breakfast</b></span></li>
+    <li class="drive"><span class="t">08:30–09:15</span><span class="what"><span class="tag">Drive</span><b>Jungmun → Hueree, Namwon</b><small>🚗 ~35 km · about 40 min</small></span></li>
+    <li class="act"><span class="t">09:15–11:45</span><span class="what"><span class="tag">Activity</span><b>Hueree Natural Park</b><small>Hydrangea gardens, outdoors and in a greenhouse. The spring hydrangea festival ran to mid-June in 2025. Also the black-pig show, plus feeding pigs and goats. Check the 2027 hours and festival dates.</small><div class="loc" data-n="Hueree Natural Park" data-ko="제주특별자치도 서귀포시 남원읍 신례동로 256" data-kq="휴애리자연생활공원" data-en="256 Sillyedong-ro, Namwon-eup, Seogwipo-si, Jeju-do" data-eq="Hueree Natural Park Jeju"></div></span></li>
+    <li class="meal"><span class="t">11:45–12:45</span><span class="what"><span class="tag">Meal</span><b>Lunch near Namwon / Wimi</b></span></li>
+    <li class="nap"><span class="t">12:45–14:30</span><span class="what"><span class="tag">💤 Nap drive</span><b>Namwon coastal road → Soesokkak → Seogwipo, a slow seaside loop</b><small>🚗 ~45 km · about 1 h 30 (direct ~15 km / 20 min)</small></span></li>
+    <li class="rest"><span class="t">14:30–15:15</span><span class="what"><span class="tag">Wind down</span><b>Park in Seogwipo, coffee, kids wake up</b></span></li>
+    <li class="act"><span class="t">15:30–16:30</span><span class="what"><span class="tag">Activity</span><b>Cheonjiyeon Waterfall</b><small>Open 09:00–22:00. Flat, stroller-friendly path to a 22 m waterfall. Free for age 6 and under. Hold hands near the water.</small><div class="loc" data-n="Cheonjiyeon Waterfall" data-ko="제주특별자치도 서귀포시 남성중로 2-15" data-kq="천지연폭포" data-en="2-15 Namseongjung-ro, Seogwipo-si, Jeju-do" data-eq="Cheonjiyeon Waterfall"></div></span></li>
+    <li class="meal"><span class="t">16:45–18:15</span><span class="what"><span class="tag">Meal</span><b>Seogwipo Maeil Olle Market: street-food dinner</b> · 🚗 ~2 km · 5 min from the falls<small>A covered market, so fine in rain. Public car park next door, first 30 min free.</small><div class="loc" data-n="Seogwipo Maeil Olle Market" data-ko="제주특별자치도 서귀포시 중앙로62번길 18" data-kq="서귀포매일올레시장" data-en="18 Jungang-ro 62beon-gil, Seogwipo-si, Jeju-do" data-eq="Seogwipo Maeil Olle Market"></div></span></li>
+    <li class="drive"><span class="t">18:15–18:45</span><span class="what"><span class="tag">Drive</span><b>Back to Jungmun</b><small>🚗 ~18 km · about 25 min</small></span></li>
+    <li class="rest"><span class="t">19:30</span><span class="what"><span class="tag">Bed</span></span></li>
+  </ul>
+  <div class="rain"><b>If it rains:</b> stick mostly to Hueree's greenhouse hydrangeas. Swap the waterfall for more time in the covered Olle Market.</div>
+</section>
+
+<!-- DAY 5 -->
+<section class="card" id="d5">
+  <h2>Day 5 · Sat 5 Jun — Camellia Hill &amp; Hello Kitty Island</h2>
+  <span class="base">Sleep: South (Jungmun)</span>
+  <ul class="tl">
+    <li class="meal"><span class="t">07:30</span><span class="what"><span class="tag">Meal</span><b>Breakfast</b></span></li>
+    <li class="drive"><span class="t">08:30–08:45</span><span class="what"><span class="tag">Drive</span><b>Jungmun → Camellia Hill</b><small>🚗 ~10 km · about 15 min</small><small>It's a Saturday, so arriving at opening beats the crowds.</small></span></li>
+    <li class="act"><span class="t">08:45–10:45</span><span class="what"><span class="tag">Activity</span><b>Camellia Hill</b><small>Opens 08:30. Summer closing listed as 18:00–19:00, last entry 1 h before. Hydrangeas start in June and peak late June to July, so expect partial bloom. Greenhouse café. Under 3 free.</small><div class="loc" data-n="Camellia Hill" data-ko="제주특별자치도 서귀포시 안덕면 병악로 166" data-kq="카멜리아힐" data-en="166 Byeongak-ro, Andeok-myeon, Seogwipo-si, Jeju-do" data-eq="Camellia Hill Jeju"></div></span></li>
+    <li class="act"><span class="t">10:55–12:15</span><span class="what"><span class="tag">Activity</span><b>Hello Kitty Island</b> · 🚗 ~3 km · 5 min<small>09:00–18:00, last entry 17:00. Child ₩13,000, under 24 months free. Net playground, ball pit, trampoline, slide, and a colouring corner with arcade games on 3F.</small><div class="loc" data-n="Hello Kitty Island" data-ko="제주특별자치도 서귀포시 안덕면 한창로 340" data-kq="헬로키티아일랜드" data-en="340 Hanchang-ro, Andeok-myeon, Seogwipo-si, Jeju-do" data-eq="Hello Kitty Island Jeju"></div></span></li>
+    <li class="meal"><span class="t">12:15–12:50</span><span class="what"><span class="tag">Meal</span><b>Lunch at the Hello Kitty café or nearby in Andeok</b></span></li>
+    <li class="nap"><span class="t">13:00–14:30</span><span class="what"><span class="tag">💤 Nap drive</span><b>South-west coast loop: Sanbangsan → Yongmeori coast → Songaksan → Moseulpo → Daejeong → back to Jungmun</b><small>About 1 h 30 of sea and volcano views for the adults.</small><small>🚗 ~60 km loop</small></span></li>
+    <li class="rest"><span class="t">15:00–17:30</span><span class="what"><span class="tag">Rest</span><b>Hotel pool afternoon</b></span></li>
+    <li class="meal"><span class="t">17:30–18:45</span><span class="what"><span class="tag">Meal</span><b>Dinner</b></span></li>
+    <li class="rest"><span class="t">19:30</span><span class="what"><span class="tag">Bed</span></span></li>
+  </ul>
+  <div class="rain"><b>If it rains:</b> spend longer at Hello Kitty Island (all indoors), then do the Teddy Bear Museum's garden café or an indoor pool.</div>
+</section>
+
+<!-- DAY 6 -->
+<section class="card" id="d6">
+  <h2>Day 6 · Sun 6 Jun — Green tea fields, over Hallasan to Aewol</h2>
+  <span class="base">Sleep: West (Aewol)</span>
+  <ul class="tl">
+    <li class="meal"><span class="t">07:30</span><span class="what"><span class="tag">Meal</span><b>Breakfast · check out by 08:30</b></span></li>
+    <li class="drive"><span class="t">08:30–09:00</span><span class="what"><span class="tag">Drive</span><b>Jungmun → O'sulloc Tea Museum</b><small>🚗 ~20 km · about 25 min</small></span></li>
+    <li class="act"><span class="t">09:00–10:45</span><span class="what"><span class="tag">Activity</span><b>O'sulloc Tea Museum &amp; tea fields</b><small>Free entry, opens 09:00. Kids run along the tea rows, adults get green-tea ice cream and roll cake. The Innisfree Jeju House garden is next door.</small><div class="loc" data-n="O&#x27;sulloc Tea Museum" data-ko="제주특별자치도 서귀포시 안덕면 신화역사로 15" data-kq="오설록 티뮤지엄" data-en="15 Sinhwayeoksa-ro, Andeok-myeon, Seogwipo-si, Jeju-do" data-eq="Osulloc Tea Museum"></div></span></li>
+    <li class="act"><span class="t">10:45–11:45</span><span class="what"><span class="tag">Play</span><b>Innisfree Jeju House garden, or a lawn run-around</b></span></li>
+    <li class="meal"><span class="t">11:45–12:40</span><span class="what"><span class="tag">Meal</span><b>Lunch in Andeok / Jeoji</b></span></li>
+    <li class="nap"><span class="t">12:45–14:15</span><span class="what"><span class="tag">💤 Nap drive</span><b>The 1100 Road over Hallasan's foothills → Jeju City → Aewol</b><small>About 1 h 20 – 1 h 30 through highland forest. Adults can glimpse the 1100 Highland viewpoint from the car.</small><small>🚗 ~65 km · direct via the west coast ~45 km / 55 min</small></span></li>
+    <li class="rest"><span class="t">14:15–15:00</span><span class="what"><span class="tag">Hotel</span><b>Kids finish napping. Check in at Aewol at 15:00.</b></span></li>
+    <li class="act"><span class="t">16:00–17:30</span><span class="what"><span class="tag">Play</span><b>Gwakji Beach, Aewol: sand play, or the flat Handam coastal promenade</b><small>🚗 ~3–5 km · 5–10 min from Aewol hotels</small><div class="loc" data-n="Gwakji Beach" data-ko="제주특별자치도 제주시 애월읍 곽지리 (곽지해수욕장)" data-kq="곽지해수욕장" data-en="Gwakji-ri, Aewol-eup, Jeju-si, Jeju-do" data-eq="Gwakji Beach Jeju"></div></span></li>
+    <li class="meal"><span class="t">17:45–19:00</span><span class="what"><span class="tag">Meal</span><b>Dinner at Aewol (sunset is around 19:40)</b></span></li>
+    <li class="rest"><span class="t">19:30</span><span class="what"><span class="tag">Bed</span></span></li>
+  </ul>
+  <p class="sub" style="margin:10px 0 0">📅 Sun 6 Jun is Korea's Memorial Day, so expect domestic-tourist crowds.</p>
+  <div class="rain"><b>If it rains:</b> O'sulloc is mostly indoors. Swap the beach for Arte Museum (Day 7's afternoon), and do Hyeopjae Beach on Day 7 afternoon instead.</div>
+</section>
+
+<!-- DAY 7 -->
+<section class="card" id="d7">
+  <h2>Day 7 · Mon 7 Jun — Hallim Park, Hyeopjae Beach, digital art, horse lighthouses</h2>
+  <span class="base">Sleep: West (Aewol)</span>
+  <ul class="tl">
+    <li class="meal"><span class="t">07:30</span><span class="what"><span class="tag">Meal</span><b>Breakfast</b></span></li>
+    <li class="drive"><span class="t">08:30–09:00</span><span class="what"><span class="tag">Drive</span><b>Aewol → Hallim Park</b><small>🚗 ~15 km · about 25 min</small></span></li>
+    <li class="act"><span class="t">09:00–11:00</span><span class="what"><span class="tag">Activity</span><b>Hallim Park</b><small>Opens 09:00, last entry about 17:30. Palm avenue, two lava caves, bird garden, folk village and a kids' play area. Under 3 free.</small><div class="loc" data-n="Hallim Park" data-ko="제주특별자치도 제주시 한림읍 한림로 300" data-kq="한림공원" data-en="300 Hallim-ro, Hallim-eup, Jeju-si, Jeju-do" data-eq="Hallim Park Jeju"></div></span></li>
+    <li class="act"><span class="t">11:00–12:00</span><span class="what"><span class="tag">Play</span><b>Hyeopjae Beach, right across the road</b> · 🚶 ~500 m<small>Very shallow, clear water with white sand. One of the best toddler beaches on the island. The official season started 24 Jun in 2026, so paddling only.</small><div class="loc" data-n="Hyeopjae Beach" data-ko="제주특별자치도 제주시 한림읍 협재리 2497-1" data-kq="협재해수욕장" data-en="2497-1 Hyeopjae-ri, Hallim-eup, Jeju-si, Jeju-do" data-eq="Hyeopjae Beach Jeju"></div></span></li>
+    <li class="meal"><span class="t">12:00–12:50</span><span class="what"><span class="tag">Meal</span><b>Lunch at Hyeopjae / Hallim</b></span></li>
+    <li class="nap"><span class="t">13:00–14:30</span><span class="what"><span class="tag">💤 Nap drive</span><b>West-coast loop: Hyeopjae → Gosan → Sinchang windmill coastal road → back inland to Aewol</b><small>🚗 ~55 km · about 1 h 30, ending at Arte Museum</small></span></li>
+    <li class="rest"><span class="t">14:30–15:00</span><span class="what"><span class="tag">Wind down</span><b>Kids wake up in the Arte Museum car park</b></span></li>
+    <li class="act"><span class="t">15:00–16:30</span><span class="what"><span class="tag">Activity</span><b>Arte Museum Jeju (Aewol)</b><small>10:00–20:00, last entry 19:00. Immersive light and sound rooms, plus a free area where the kids' drawings come alive on the wall. Children born 2023 or later free. Born 2020–22 get a ₩8,000 rate, bought on site with ID. It's dark inside, so go to the toilet first.</small><div class="loc" data-n="Arte Museum Jeju" data-ko="제주특별자치도 제주시 애월읍 어림비로 478" data-kq="아르떼뮤지엄 제주" data-en="478 Eorimbi-ro, Aewol-eup, Jeju-si, Jeju-do" data-eq="Arte Museum Jeju"></div></span></li>
+    <li class="drive"><span class="t">16:45–17:15</span><span class="what"><span class="tag">Drive</span><b>To Iho Tewoo Beach, near the airport</b><small>🚗 ~20 km · about 30 min</small></span></li>
+    <li class="act"><span class="t">17:15–18:00</span><span class="what"><span class="tag">Play</span><b>Iho Tewoo Beach: the red and white horse lighthouses, plus sand play</b><div class="loc" data-n="Iho Tewoo Beach" data-ko="제주특별자치도 제주시 도리로 (이호일동)" data-kq="이호테우해변" data-en="Dori-ro, Iho 1-dong, Jeju-si, Jeju-do" data-eq="Iho Tewoo Beach"></div></span></li>
+    <li class="meal"><span class="t">18:00–19:00</span><span class="what"><span class="tag">Meal</span><b>Last-night dinner in Jeju City: black pork</b><small>Optional, only if the kids are holding up: 10–15 min at Dongmun Night Market (opens around 18:00–19:00). 🚗 Iho → Jeju City ~7 km · 15 min.</small><div class="loc" data-n="Dongmun Traditional Market" data-ko="제주특별자치도 제주시 관덕로14길 20" data-kq="동문재래시장" data-en="20 Gwandeok-ro 14-gil, Jeju-si, Jeju-do" data-eq="Dongmun Traditional Market Jeju"></div></span></li>
+    <li class="drive"><span class="t">19:00–19:30</span><span class="what"><span class="tag">Car</span><b>Refuel the van (it must go back full). Drive back to Aewol.</b><small>🚗 Jeju City → Aewol ~20 km · about 30 min</small></span></li>
+    <li class="rest"><span class="t">19:30–20:30</span><span class="what"><span class="tag">Pack</span><b>Kids to bed. Adults pack and lay out pyjamas and snack boxes for the morning.</b></span></li>
+  </ul>
+  <div class="rain"><b>If it rains:</b> keep Hallim Park's caves and greenhouse, drop Hyeopjae, do Arte Museum in the morning and Hallim in the afternoon.</div>
+</section>
+
+<!-- DAY 8 -->
+<section class="card" id="d8">
+  <h2>Day 8 · Tue 8 Jun — Home</h2>
+  <ul class="tl">
+    <li class="rest"><span class="t">05:15</span><span class="what"><span class="tag">Wake</span><b>Carry the kids out in pyjamas with snack boxes for the car</b></span></li>
+    <li class="drive"><span class="t">05:45–06:20</span><span class="what"><span class="tag">Drive</span><b>Aewol → rental-car centre</b><small>🚗 ~20 km · about 30–35 min</small></span></li>
+    <li class="drive"><span class="t">06:20–06:45</span><span class="what"><span class="tag">Car</span><b>Return the van and child seats, shuttle to the terminal</b></span></li>
+    <li class="fly"><span class="t">06:45</span><span class="what"><span class="tag">Flight</span><b>Check in for Scoot TR813</b><div class="loc" data-n="Jeju International Airport" data-ko="제주특별자치도 제주시 공항로 2" data-kq="제주국제공항" data-en="2 Gonghang-ro, Jeju-si, Jeju-do" data-eq="Jeju International Airport"></div><small>The counter usually closes 60 min before departure. Breakfast airside.</small></span></li>
+    <li class="fly"><span class="t">08:35</span><span class="what"><span class="tag">Flight</span><b>TR813 departs Jeju</b></span></li>
+    <li class="fly"><span class="t">13:30</span><span class="what"><span class="tag">Flight</span><b>Land at Changi (Singapore time)</b><small>The usual 1–4 pm nap falls in the last hours of the flight and the ride home.</small></span></li>
+  </ul>
+</section>
+
+
+<section class="card" id="places">
+  <h2>📍 All addresses</h2>
+  <p class="sub">Tap <b>Naver</b> for the Korean address in Naver Map, or <b>Google</b> for the English one. <b>Copy</b> copies the Korean address so you can paste it into the car's GPS or Kakao Map. Naver and Kakao give the best turn-by-turn driving in Korea. Add the three hotel addresses once booked.</p>
+  <table><thead><tr><th>Place</th><th>Korean (Naver) / English (Google)</th></tr></thead><tbody id="placesBody"></tbody></table>
+  <p class="sub" style="margin-top:8px">Distances and drive times are estimates. Check them in Naver Map on the day, since traffic and the route change them.</p>
+</section>
+
+<!-- PREP -->
+<section class="card" id="prep">
+  <h2>Before you go</h2>
+  <h3>🚐 Van &amp; driving</h3>
+  <ul class="clean">
+    <li><b>Book a Kia Carnival 9-seater</b> with 3 child seats. Korea requires car seats for children under 6, and the 6-year-old will probably still want a booster. Book early, since 9-seaters and child seats run out.</li>
+    <li><b>Bring an International Driving Permit</b>, book type, valid for the whole rental, plus your Singapore licence, passport and a credit card in the driver's name. 9-seaters need <b>Class B</b>. 11-seat Staria-type vans can need <b>Class D</b>, so stick to 9 seats.</li>
+    <li>Rental companies often require drivers of large vans to be 26+ with 3 years' experience. Check before you book.</li>
+    <li>Use <b>Naver Map or Kakao Map</b> for directions. Google Maps doesn't give turn-by-turn driving in Korea.</li>
+  </ul>
+  <h3>🎟️ Book ahead</h3>
+  <ul class="clean">
+    <li>Scoot TR812 / TR813 with 7 seats together, and 20 kg+ bags (strollers usually go free).</li>
+    <li>Hotels: 2 nights East, 3 nights Jungmun, 2 nights Aewol. Ask each for early check-in, and pick ones with a pool or indoor pool if you can.</li>
+    <li>Online tickets are usually cheaper for Aqua Planet, Snoopy Garden, Eco Land, Hello Kitty Island, Camellia Hill and Hallim Park.</li>
+    <li>Check whether Singapore passports need a K-ETA for June 2027.</li>
+  </ul>
+  <h3>☀️ Early-June weather</h3>
+  <ul class="clean">
+    <li>Usually warm, about 20–25 °C. The rainy season normally starts mid to late June, so this week usually falls just before it, but pack light rain jackets.</li>
+    <li>Sun hats, kids' sunscreen, swimwear and a change of clothes in the van for beach stops. Bring sand toys from home.</li>
+  </ul>
+
+  <h3>👶 Kid prices at a glance (2026 rates)</h3>
+  <table>
+    <tr><th>Place</th><th>Hours</th><th>Child</th><th>3-yr-old</th></tr>
+    <tr><td>Aqua Planet</td><td>09:30–18:00</td><td>see site</td><td>Paid (free only under 36 mo)</td></tr>
+    <tr><td>Snoopy Garden</td><td>09:00–19:00</td><td>₩13,000</td><td>Paid (free only under 36 mo)</td></tr>
+    <tr><td>Eco Land</td><td>08:30–18:00</td><td>₩10,000</td><td>Paid (free only under 36 mo)</td></tr>
+    <tr><td>Teddy Bear Museum</td><td>09:00–18:00</td><td>≈ ₩10,000</td><td>check</td></tr>
+    <tr><td>Hello Kitty Island</td><td>09:00–18:00</td><td>₩13,000</td><td>Free under 24 mo (paid)</td></tr>
+    <tr><td>Camellia Hill</td><td>08:30–18:00/19:00</td><td>see site</td><td>Free age 3 and under</td></tr>
+    <tr><td>Hallim Park</td><td>09:00–18:00</td><td>see site</td><td>Free under 3</td></tr>
+    <tr><td>Arte Museum</td><td>10:00–20:00</td><td>₩8,000 (born 2020–22)</td><td>Free (born 2023+)</td></tr>
+    <tr><td>Cheonjiyeon Falls</td><td>09:00–22:00</td><td>Free age 6 and under</td><td>Free</td></tr>
+    <tr><td>O'sulloc Tea Museum</td><td>09:00–18:00/19:00</td><td>Free</td><td>Free</td></tr>
+  </table>
+  <p class="sub" style="margin-top:8px">The 3-year-old is past the 36-month free cut-off, so expect to pay the child rate at most places. Arte Museum's free entry goes by birth year (2023 or later).</p>
+</section>
+
+</main>
+<footer>Made for the Jeju family trip, 1–8 June 2027. Hours and prices are from 2026 sources, so recheck a week before you fly.</footer>
+<script>
+(function(){
+  var nv=function(q){return 'https://map.naver.com/p/search/'+encodeURIComponent(q)};
+  var gg=function(q){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)};
+  function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML}
+  function copyBtn(text){var b=document.createElement('button');b.type='button';b.textContent='Copy';
+    b.addEventListener('click',function(){try{navigator.clipboard.writeText(text).then(function(){b.textContent='Copied ✓';setTimeout(function(){b.textContent='Copy'},1500)},function(){b.textContent='Select & copy'})}catch(e){b.textContent='Select & copy'}});return b}
+  function rows(d){
+    var w=document.createElement('div');
+    w.innerHTML='<div class="r"><span class="lb kr">KR</span><span class="ad">'+esc(d.ko)+'</span><a href="'+nv(d.kq)+'" target="_blank" rel="noopener">Naver ↗</a></div>'+
+      '<div class="r"><span class="lb en">EN</span><span class="ad">'+esc(d.en)+'</span><a href="'+gg(d.eq)+'" target="_blank" rel="noopener">Google ↗</a></div>';
+    w.firstChild.appendChild(copyBtn(d.ko));return w}
+  var seen={},body=document.getElementById('placesBody');
+  document.querySelectorAll('.loc').forEach(function(el){
+    var d=el.dataset;el.appendChild(rows(d));
+    if(!seen[d.n]&&body){seen[d.n]=1;var tr=document.createElement('tr');
+      var td1=document.createElement('td');td1.innerHTML='<b>'+esc(d.n)+'</b>';
+      var td2=document.createElement('td');var bx=document.createElement('div');bx.className='loc';bx.style.marginTop='0';bx.appendChild(rows(d));td2.appendChild(bx);tr.appendChild(td1);tr.appendChild(td2);body.appendChild(tr)}
+  });
+})();
+</script>
+</body>
+</html>
